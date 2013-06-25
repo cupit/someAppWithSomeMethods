@@ -43,6 +43,8 @@
         self.view.backgroundColor = [UIColor blueColor];
     } else if ([button.titleLabel.text isEqualToString:@"yellow"]) {
         self.view.backgroundColor = [UIColor yellowColor];
+    } else if ([button.titleLabel.text isEqualToString:@"black"]) {
+        self.view.backgroundColor = [UIColor blackColor];
     }
 }
 @end
