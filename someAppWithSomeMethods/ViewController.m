@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+- (IBAction)changeBackground:(id)sender;
 
 @end
 
@@ -31,4 +32,15 @@
     NSLog(@"Hello!");
 }
 
+- (IBAction)changeBackground:(id)sender {
+    
+    NSAssert([sender isKindOfClass:[UIButton class]], @"sender must be UIButton");
+    
+    UIButton *button = sender;
+    if ([button.titleLabel.text isEqualToString:@"red"]) {
+        self.view.backgroundColor = [UIColor redColor];
+    } else if ([button.titleLabel.text isEqualToString:@"blue"]) {
+        self.view.backgroundColor = [UIColor blueColor];
+    }
+}
 @end
